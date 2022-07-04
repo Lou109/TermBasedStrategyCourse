@@ -10,13 +10,15 @@ public class MouseWorld : MonoBehaviour
 
     void Awake()
     {
-      instance = this;
+        instance = this;
     }
 
     public static Vector3 GetPosition()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Physics.Raycast(ray, out RaycastHit raycastHit, float.MaxValue, instance.mousePlaneLayerMask);
-        return raycastHit.point;
+   
+    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    Physics.Raycast(ray, out RaycastHit raycastHit, float.MaxValue, instance.mousePlaneLayerMask);
+    return raycastHit.point;
+      
     }
 }
