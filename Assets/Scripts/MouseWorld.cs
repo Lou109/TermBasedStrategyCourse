@@ -5,7 +5,7 @@ using UnityEngine;
 public class MouseWorld : MonoBehaviour
 {
     private static MouseWorld instance;
-    [SerializeField] LayerMask mousePlaneLayerMask;
+    [SerializeField] private LayerMask mousePlaneLayerMask;
 
     void Awake()
     {

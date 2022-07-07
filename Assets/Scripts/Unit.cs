@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    [SerializeField] Animator unitAnimator;
-    Vector3 targetPosition;
+    [SerializeField] private Animator unitAnimator;
+     private Vector3 targetPosition;
 
-    void Awake()
+    private void Awake()
     {
         targetPosition = transform.position;
     }
 
-    void Update()
+    private void Update()
     {
         unitAnimator.SetBool("IsWalking", true);
         float stoppingDistance = .1f;

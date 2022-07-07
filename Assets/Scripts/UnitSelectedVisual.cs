@@ -5,28 +5,29 @@ using UnityEngine;
 
 public class UnitSelectedVisual : MonoBehaviour
 {
- 
-   [SerializeField] Unit unit;
-    MeshRenderer meshRenderer;
 
-    void Awake()
+    [SerializeField] private Unit unit;
+
+    private MeshRenderer meshRenderer;
+
+    private void Awake()
 
     {
         meshRenderer = GetComponent<MeshRenderer>();
     }
 
-    void Start()
+    private void Start()
     {
         UnitActionSystem.Instance.OnSelectedUnitChanged += UnitActionSystem_OnSelectedUnitChanged;
         UpdateVisual();
     }
 
-    void UnitActionSystem_OnSelectedUnitChanged(object sender, EventArgs empty)
+    private void UnitActionSystem_OnSelectedUnitChanged(object sender, EventArgs empty)
     {
         UpdateVisual();
     }
 
-    void UpdateVisual()
+    private void UpdateVisual()
     {
         if (UnitActionSystem.Instance.GetSelectedUnit() == unit)
         {

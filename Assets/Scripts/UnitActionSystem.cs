@@ -9,10 +9,10 @@ public class UnitActionSystem : MonoBehaviour
 
     public event EventHandler OnSelectedUnitChanged;
 
-    [SerializeField] Unit selectedUnit;
-    [SerializeField] LayerMask unitLayerMask;
+    [SerializeField] private Unit selectedUnit;
+    [SerializeField] private LayerMask unitLayerMask;
 
-    void Awake()
+    private void Awake()
     {
         if (Instance != null)
         {
@@ -24,7 +24,7 @@ public class UnitActionSystem : MonoBehaviour
         Instance = this;
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -48,7 +48,7 @@ public class UnitActionSystem : MonoBehaviour
         return false;
     }
 
-    void SetSelectedUnit(Unit unit)
+    private void SetSelectedUnit(Unit unit)
     {
         selectedUnit = unit;
         OnSelectedUnitChanged?.Invoke(this, EventArgs.Empty);      
