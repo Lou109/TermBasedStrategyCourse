@@ -7,6 +7,7 @@ public class MoveAction : MonoBehaviour
     
     [SerializeField] private Animator unitAnimator;
     [SerializeField] private int maxMoveDistance = 4;
+        
 
     private Vector3 targetPosition;
     private Unit unit;

@@ -43,6 +43,11 @@ public class GridSystemVisual : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        UpdateGridVisual();
+    }
+
     public void HideAllGridPositions()
     {
 
@@ -63,5 +68,13 @@ public class GridSystemVisual : MonoBehaviour
         {
             gridSystemVisualSingleArray[gridPosition.x, gridPosition.z].Show();
         }
+    }
+
+    private void UpdateGridVisual()
+    {
+        HideAllGridPositions();
+        Unit selectedUnit = UnitActionSystem.Instance.GetSelectedUnit();
+        ShowGridPositionList(
+        selectedUnit.GetMoveAction().GetValidActionGridPositionList());
     }
 }

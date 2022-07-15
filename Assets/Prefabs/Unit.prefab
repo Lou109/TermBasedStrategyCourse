@@ -34,7 +34,7 @@ Transform:
   - {fileID: 1039924728451850528}
   - {fileID: 8690255213569786187}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1044492242774722444
 MonoBehaviour:
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitAnimator: {fileID: 1092833144340971576}
-  maxMoveDistance: 1
+  maxMoveDistance: 4
 --- !u!1 &6970630659056612291
 GameObject:
   m_ObjectHideFlags: 0
