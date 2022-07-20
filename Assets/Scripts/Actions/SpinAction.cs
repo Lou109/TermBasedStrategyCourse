@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class SpinAction : BaseAction
 {
-   
+
     private float totalSpinAmount;
     private Action onSpinComplete;
-    
+
     private void Update()
     {
         if (!isActive)
         {
             return;
         }
-  
+
         float spinAddAmount = 360f * Time.deltaTime;
         transform.eulerAngles += new Vector3(0, spinAddAmount, 0);
 
@@ -26,11 +26,16 @@ public class SpinAction : BaseAction
             onActionComplete();
         }
     }
-    
+
     public void Spin(Action onActionComplete)
     {
         this.onActionComplete = onActionComplete;
         isActive = true;
         totalSpinAmount = 0f;
+    }
+
+    public override string GetActionName()
+    {
+        return "Spin";
     }
 }

@@ -1204,7 +1204,8 @@ PrefabInstance:
       propertyPath: maxMoveDistance
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8121604045166292136, guid: 3d775f49d7df04f6686cec47aba090d2, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d775f49d7df04f6686cec47aba090d2, type: 3}
 --- !u!1 &1768240557
@@ -1264,6 +1265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1836032904}
+  - component: {fileID: 1836032905}
   m_Layer: 5
   m_Name: UnitActionSystemUI
   m_TagString: Untagged
@@ -1292,6 +1294,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1836032905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836032903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67947f080214246a280e2b6ca9875b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionButtonPrefab: {fileID: 3649116668555390681, guid: 188cabf84a1c047aa894750ab8af6fca,
+    type: 3}
+  actionButtonContainerTransform: {fileID: 287155546}
 --- !u!1 &1878575750
 GameObject:
   m_ObjectHideFlags: 0
